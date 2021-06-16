@@ -1,9 +1,9 @@
 # Macroable Models for Eloquent
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/derheyne/laravel-macroable-models.svg?style=flat-square)](https://packagist.org/packages/derheyne/laravel-macroable-models)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/dheyne/laravel-macroable-models.svg?style=flat-square)](https://packagist.org/packages/derheyne/laravel-macroable-models)
 [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/derheyne/laravel-macroable-models/run-tests?label=tests)](https://github.com/derheyne/laravel-macroable-models/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/derheyne/laravel-macroable-models/Check%20&%20fix%20styling?label=code%20style)](https://github.com/derheyne/laravel-macroable-models/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/derheyne/laravel-macroable-models.svg?style=flat-square)](https://packagist.org/packages/derheyne/laravel-macroable-models)
+[![Total Downloads](https://img.shields.io/packagist/dt/dheyne/laravel-macroable-models.svg?style=flat-square)](https://packagist.org/packages/derheyne/laravel-macroable-models)
 
 This package allows you to dynamically add methods, accessors, mutators, and local scopes via macros to any Eloquent
 model.
