@@ -15,13 +15,13 @@ I don't know when you would use that - but here it is.
 Install the package via composer in your Laravel application:
 
 ```bash
-composer require derheyne/laravel-macroable-models
+composer require dheyne/laravel-macroable-models
 ```
 
 ## Usage
 
 To make any of your Eloquent models macroable, just extend them with the `Dheyne\LaravelMacroableModels\MacroableModel`
-and you're all set. You can then define accessors, mutators, and local scopes from anywhere like you are in the model
+and you're all set. You can then define accessors, mutators, and local scopes from anywhere like you would in the model
 itself.
 
 ```php
