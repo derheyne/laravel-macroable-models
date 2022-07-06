@@ -131,6 +131,35 @@ class MacroableModelTest extends TestCase
         self::assertEquals('modified: native mutator value', $model->native_mutator);
     }
 
+    /** @test */
+    public function a_macroable_model_can_access_native_methods(): void
+    {
+        $model = new ModelWithMacros();
+        $query = $model->where('column', 'value');
+
+        /** @noinspection SqlNoDataSourceInspection */
+        self::assertEquals(
+            'select * from `table` where `column` = ?',
+            $query->toSql()
+        );
+
+        self::assertEquals(['value'], $query->getBindings());
+    }
+
+    /** @test */
+    public function a_macroable_model_can_access_native_static_methods(): void
+    {
+        $query = ModelWithMacros::where('column', 'value');
+
+        /** @noinspection SqlNoDataSourceInspection */
+        self::assertEquals(
+            'select * from `table` where `column` = ?',
+            $query->toSql()
+        );
+
+        self::assertEquals(['value'], $query->getBindings());
+    }
+
     public function setUp(): void
     {
         parent::setUp();

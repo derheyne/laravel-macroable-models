@@ -10,6 +10,7 @@ class MacroableModel extends Model
 {
     use Macroable {
         Macroable::__call as __macroCall;
+        Macroable::__callStatic as __macroCallStatic;
     }
 
     public function hasGetMutator($key): bool
@@ -52,5 +53,14 @@ class MacroableModel extends Model
         }
 
         return parent::__call($method, $parameters);
+    }
+
+    public static function __callStatic($method, $parameters)
+    {
+        if (self::hasMacro($method)) {
+            return self::__macroCallStatic($method, $parameters);
+        }
+
+        return parent::__callStatic($method, $parameters);
     }
 }
